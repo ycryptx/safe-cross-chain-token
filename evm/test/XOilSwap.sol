@@ -2,14 +2,14 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/Counter.sol";
+import "../src/XOilSwap.sol";
 
-contract CounterTest is Test {
-    Counter public counter;
+contract OilSwapTest is Test {
+    XOilSwap public oilSwap;
 
     function setUp() public {
-        counter = new Counter();
-        counter.setNumber(0);
+        oilSwap = new OilSwap();
+        oilSwap.setNumber(0);
     }
 
     function testIncrement() public {

@@ -11,7 +11,7 @@ contract XOilSwapScript is Script {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);
 
-        NFT nft = new NFT("NFT_tutorial", "TUT", "baseUri");
+        // NFT nft = new NFT("NFT_tutorial", "TUT", "baseUri");
 
         vm.stopBroadcast();
     }

@@ -8,7 +8,7 @@ contract XOilSwap {
         xOIL = _xOIL;
     }
 
-    function swap(uint256 amount) public {
+    function swap(uint256 amount) public pure returns (uint256) {
         return amount;
     }
 }

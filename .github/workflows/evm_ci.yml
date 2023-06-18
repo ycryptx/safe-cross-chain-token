@@ -18,15 +18,19 @@ jobs:
           version: nightly
 
       - name: Install dependencies
+        working-directory: ./evm
         run: forge install
 
       - name: Check contract sizes
+        working-directory: ./evm
         run: forge build --sizes
 
       - name: Check gas snapshots
+        working-directory: ./evm
         run: forge snapshot --check
 
       - name: Run tests
+        working-directory: ./evm
         run: forge test
         env:
           # Only fuzz intensely if we're running this action on a push to main or for a PR going into main:

@@ -4,7 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Script.sol";
 import "src/CustomMintableToken.sol";
 
-contract NativeTokenScript is Script {
+contract NativeTokenDeployScript is Script {
     CustomMintableToken private token;
 
     function setUp() public {}
@@ -25,7 +25,7 @@ contract NativeTokenScript is Script {
 }
 
 // NOTE: this is a mock xOIL token contract that should be deployed only for testing
-contract MockXOilTokenScript is Script {
+contract MockXOilTokenDeployScript is Script {
     CustomMintableToken private token;
 
     function setUp() public {}

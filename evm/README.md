@@ -10,3 +10,46 @@ It exposes a `Swap` function that enables any user to swap xOIL to ISC. `Swap` v
 
 **CustomMintableToken**
 A standard Ownable ERC20 with Mint/Burn functionalities.
+
+## Required dependencies
+
+This project uses Foundry: [please install here](https://book.getfoundry.sh/getting-started/installation).
+
+## Use in a local testnet environment:
+
+You can play around with the contracts in Anvil, a local testnet environment provided by Foundry.
+To run, in a terminal window run:
+
+```bash
+anvil
+```
+
+Create a .env file as such:
+```
+PRIVATE_KEY=<Your private key>
+MNEMONIC=<Your Mnemonic>
+```
+
+And run:
+```bash
+source .env
+```
+
+Next we're going to deploy all relevant contracts.
+
+1. Deploy the native token (keep track of the contract address in the output of the transaction):
+    ```bash
+    make deploy-native-token-local-testnet
+    ```
+
+2. Deploy the xOIL Mock token (keep track of the contract address in the output of the transaction):
+    ```bash
+    make deploy-mock-xOIL-token-local-testnet
+    ```
+
+3. Then finally deploy the xOilSwap contract (make sure to edit [./script/XOilSwap.s.sol](./script/XOilSwap.s.sol) as specified in the file):
+    ```bash
+    make deploy-xOilSwap-contract-local-testnet
+    ```
+
+All that's left now is to fund the swap contract with the native token, and to approve the swap contract to spend xOil in the name of the user. Then the user can successfully swap xOil for native token.

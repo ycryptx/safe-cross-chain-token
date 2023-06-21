@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "description": "Scripting to create Wormhole attestations for bridged tokens",
   "type": "module",
-  "licenses": [
-    {
-      "license": "Apache2.0"
-    }
-  ],
   "engines": {
     "node": ">= 18.12 <19"
   },
